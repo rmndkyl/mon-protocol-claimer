@@ -52,7 +52,7 @@ function _0x1764() {
     'Completed\x20quest:',
     'data',
     '430431akAMXd',
-    'Mon\x20Protocol\x20Auto\x20Claimer\x20–\x20Happy\x20Cuan\x20Airdrop\x0aSubscribe:\x20https://t.me/HappyCuanAirdrop',
+    'Mon\x20Protocol\x20Auto\x20Claimer\x20–\x20Layer\x20Airdrop\x0aSubscribe:\x20https://t.me/layerairdrop',
     'log',
     'quests',
     'https://app.monprotocol.ai/api/trpc/quests.quests',
