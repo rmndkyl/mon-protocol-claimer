@@ -52,7 +52,7 @@ function _0x1764() {
     'Completed\x20quest:',
     'data',
     '430431akAMXd',
-    'Mon\x20Protocol\x20Auto\x20Claimer\x20–\x20Layer\x20Airdrop\x0aSubscribe:\x20https://t.me/layerairdrop',
+    'Mon\x20Protocol\x20Auto\x20Claimer\x20–\x20Happy\x20Cuan\x20Airdrop\x0aSubscribe:\x20https://t.me/HappyCuanAirdrop',
     'log',
     'quests',
     'https://app.monprotocol.ai/api/trpc/quests.quests',
@@ -68,6 +68,11 @@ function _0x1764() {
   };
   return _0x1764();
 }
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 async function fetchAndCompleteQuests() {
   const _0x33b3d0 = _0x3777;
   alert(_0x33b3d0(0x1cd));
@@ -78,19 +83,22 @@ async function fetchAndCompleteQuests() {
       _0x4e55ef =
         _0xf2ed39[_0x33b3d0(0x1d9)][_0x33b3d0(0x1cb)][_0x33b3d0(0x1db)];
     for (const _0x1aebf7 of _0x4e55ef) {
-      _0x1aebf7['user_quest_completion'] === null &&
-        (await completeQuest(_0x1aebf7[_0x33b3d0(0x1cf)]['id']),
+      if (_0x1aebf7['user_quest_completion'] === null) {
+        await completeQuest(_0x1aebf7[_0x33b3d0(0x1cf)]['id']);
         console[_0x33b3d0(0x1ce)](
           _0x33b3d0(0x1ca),
           _0x1aebf7[_0x33b3d0(0x1cf)]['id']
-        ),
-        (_0x110786 = !![]));
+        );
+        _0x110786 = !![];
+        await delay(2000); // Jeda 2 detik antara setiap quest
+      }
     }
   } catch (_0x576fc4) {
     console[_0x33b3d0(0x1e1)](_0x33b3d0(0x1da), _0x576fc4);
   }
   !_0x110786 && alert(_0x33b3d0(0x1e0));
 }
+
 async function completeQuest(_0x2d082c) {
   const _0x39d8b6 = _0x3777;
   try {
@@ -104,4 +112,5 @@ async function completeQuest(_0x2d082c) {
     console[_0x39d8b6(0x1e1)]('Error\x20completing\x20quest:', _0x363511);
   }
 }
+
 fetchAndCompleteQuests();
